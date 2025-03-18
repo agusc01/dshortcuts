@@ -1,3 +1,9 @@
+static item data_realtime[] = {
+    { "h", "htop"   },
+    { "b", "btop"   },
+    { "t", "top"   },
+};
+
 static item ratoli[] = {
     { "d", "Dreta"    },
     { "e", "Esquerra" },

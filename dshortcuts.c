@@ -205,7 +205,7 @@ static int drawitem(item *item, int x, int y, int w)
 {
     if (item->keyname[0] == '#') {
         drw_setscheme(drw, scheme[SchemeTitle]);
-        y += titlepadding;
+        y += colpadding;
         return drw_text(drw, x, y, w, bh, lrpad / 2, item->text, 0);
     }
     

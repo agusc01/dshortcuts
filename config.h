@@ -6,9 +6,9 @@ static int topbar = 1;                      /* -b  option; if 0, dmenu appears a
 static char font[] = "monospace:size=12";
 static const char *fonts[] = {
     font,
-	"monospace:size=12"
+	"Ubuntu:size=14"
 };
-static char sep[]           = "->";    /* -s option; set the separator between key and text */
+static char sep[]           = ":";    /* -s option; set the separator between key and text */
 static char *maxkey         = "p";
 static char background[]    = "#000000"; /* global background */
 static char keyfg[]         = "#00ff00"; /* key name foreground */
@@ -66,16 +66,17 @@ ResourcePref resources[] = {
 /* parent items */
 static item items[] = {
     /* keyname  description    path to script keep open?  childs      childs length  vertical   */
-    { "l",    "Llançador",     SC("launcher"),   0,   launch,     LENGTH(launch)    ,0 },
-    { "c",    "Configuració",  NULL,             0,   config,     LENGTH(config)    ,0 },
-    { "e",    "Emacs",         SC("emacs"),      0,   emacs,      LENGTH(emacs)     ,0 },
-    { "g",    "Gravadora",     NULL,             0,   record,     LENGTH(record)    ,0 },
-    { "d",    "DWM",           SC("dwm"),        0,   dwm,        LENGTH(dwm)       ,0 },
-    { "s",    "Música",        SC("music"),      0,   music,      LENGTH(music)     ,0 },
-    { "y",    "Sync",          NULL,             0,   cron,       LENGTH(cron)      ,0 },
-    { "t",    "Toggle",        SC("toggle"),     0,   toggle,     LENGTH(toggle)    ,0 },
-    { "T",    "Tabbed",        SC("tabbed"),     0,   tabbed,     LENGTH(tabbed)    ,1 },
-    { "x",    "Tanca",         SC("power"),      0,   power,      LENGTH(power)     ,0 },
+    { "d",    "Data realtime", NULL,             0,   data_realtime,     LENGTH(data_realtime)    ,0 },
+    // { "l",    "Llançador",     SC("launcher"),   0,   launch,            LENGTH(launch)           ,0 },
+    // { "c",    "Configuració",  NULL,             0,   config,            LENGTH(config)           ,0 },
+    // { "e",    "Emacs",         SC("emacs"),      0,   emacs,             LENGTH(emacs)            ,0 },
+    // { "g",    "Gravadora",     NULL,             0,   record,            LENGTH(record)           ,0 },
+    // { "d",    "DWM",           SC("dwm"),        0,   dwm,               LENGTH(dwm)              ,0 },
+    // { "s",    "Música",        SC("music"),      0,   music,             LENGTH(music)            ,0 },
+    // { "y",    "Sync",          NULL,             0,   cron,              LENGTH(cron)             ,0 },
+    // { "t",    "Toggle",        SC("toggle"),     0,   toggle,            LENGTH(toggle)           ,0 },
+    // { "T",    "Tabbed",        SC("tabbed"),     0,   tabbed,            LENGTH(tabbed)           ,1 },
+    // { "x",    "Tanca",         SC("power"),      0,   power,             LENGTH(power)            ,0 },
 };
 
 //static item mitems[] = {
