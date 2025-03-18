@@ -1,11 +1,11 @@
-# my build of flybinds
+# my build of dshortcuts
 Modifications:
 
-- View my `dotfiles` repo for my scripts, in `~/sc/flybinds`.
+- View my `dotfiles` repo for my scripts, in `~/sc/dshortcuts`.
 - Better organization with new `items.h` file.
 
 
-# flybinds
+# dshortcuts
 Create keyboard shortcuts (and show available combinations in top of screen) without holding
 modifier keys (ctrl, super, meta, ...)
 
@@ -28,12 +28,12 @@ m d -> dual display monitor
 ```
 You can press Left Key to go up to the menu.
 
-For more power, you can launch `flybinds` followed by some arguments `key1 key2 ...` to navigate to those items.
+For more power, you can launch `dshortcuts` followed by some arguments `key1 key2 ...` to navigate to those items.
 
-For example, let's say we have a parent item **c (config)** and there a child **m (monitors)** which have child to setup the monitors. Then, we can run `flybinds c m` to open *flybinds* directly in the *monitors* section.
+For example, let's say we have a parent item **c (config)** and there a child **m (monitors)** which have child to setup the monitors. Then, we can run `dshortcuts c m` to open *dshortcuts* directly in the *monitors* section.
 
 ## Xresources
-It can be configured via the `~/.Xresources` file, using the class `flybinds`. Check `config.def.h` to see what resources can be customized.
+It can be configured via the `~/.Xresources` file, using the class `dshortcuts`. Check `config.def.h` to see what resources can be customized.
 
 ## Scripts
 To avoid writing a script per item, you can group a script for a whole submenu. In the example of *shutdown, reboot, ...* we can write a simple script like this:
@@ -50,7 +50,7 @@ Just play around with the program and you will understand it!
 
 Requirements
 ------------
-In order to build flybinds you need the Xlib header files.
+In order to build dshortcuts you need the Xlib header files.
 
 
 Installation

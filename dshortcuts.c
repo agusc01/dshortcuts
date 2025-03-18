@@ -305,7 +305,7 @@ spawn(char* sc, char** args)
             close(ConnectionNumber(dpy));
         setsid();
         execvp(v[0], v);
-        fprintf(stderr, "flybinds: execvp %s", v[0]);
+        fprintf(stderr, "dshortcuts: execvp %s", v[0]);
         perror(" failed");
     }
 }
@@ -480,7 +480,7 @@ resource_load(XrmDatabase db, char *name, enum resource_type rtype, void *dst)
 	char fullname[256];
 	char *type;
 	XrmValue ret;
-	snprintf(fullname, sizeof(fullname), "%s.%s", "flybinds", name);
+	snprintf(fullname, sizeof(fullname), "%s.%s", "dshortcuts", name);
 	fullname[sizeof(fullname) - 1] = '\0';
 	XrmGetResource(db, fullname, "*", &type, &ret);
 	if (!(ret.addr == NULL || strncmp("String", type, 64)))
@@ -525,7 +525,7 @@ setup(void)
 	XIM xim;
 	Window w, dw, *dws;
 	XWindowAttributes wa;
-	XClassHint ch = {"flybinds", "flybinds"};
+	XClassHint ch = {"dshortcuts", "dshortcuts"};
 #ifdef XINERAMA
 	XineramaScreenInfo *info;
 	Window pw;
@@ -620,7 +620,7 @@ setup(void)
 static void
 usage(void)
 {
-	fputs("usage: flybinds [-bvh] [-c columns] [-fn font] [-m monitor]\n"
+	fputs("usage: dshortcuts [-bvh] [-c columns] [-fn font] [-m monitor]\n"
 	      "                [-bg color] [-kf color] [-sf color] [-df color] [-bc color]\n"
 	      "                [-cs separation] [-ph paddingH] [-pv paddingV] [-bw border width]\n"
           "                [-w windowid] key1 key2 ...\n", stderr);
@@ -642,7 +642,7 @@ main(int argc, char *argv[])
 	for (i = 1; i < argc; i++)
 		/* these options take no arguments */
 		if (!strcmp(argv[i], "-v")) {      /* prints version information */
-			puts("flybinds-"VERSION);
+			puts("dshortcuts-"VERSION);
 			exit(0);
 		} else if (!strcmp(argv[i], "-b")) /* appears at the bottom of the screen */
 			topbar = 0;

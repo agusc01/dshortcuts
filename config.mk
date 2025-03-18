@@ -1,4 +1,4 @@
-# flybinds version
+# dshortcuts version
 VERSION = 1.0
 
 # paths

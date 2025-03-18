@@ -98,7 +98,7 @@ static item edit[] = {
     { "d", "dwm"       },
     { "b", "dwmblocks" },
     { "e", "emacs"     },
-    { "f", "flybinds"  },
+    { "f", "dshortcuts"  },
     { "v", "neovim"    },
     { "l", "slock"     },
     { "t", "st"        },

@@ -10,12 +10,12 @@ static const char *fonts[] = {
 };
 static char sep[]           = ":";    /* -s option; set the separator between key and text */
 static char *maxkey         = "p";
-static char background[]    = "#000000"; /* global background */
+static char background[]    = "#14213D"; /* global background */
 static char keyfg[]         = "#00ff00"; /* key name foreground */
 static char titlefg[]       = "#ff0000"; /* key name foreground */
 static char sepfg[]         = "#00ffff"; /* separator foreground */
 static char descfg[]        = "#ffffff"; /* description foreground */
-static char bordercol[]     = "#ff0000"; /* border color */
+static char bordercol[]     = "#005F73"; /* border color */
 static unsigned int backkey = XK_h;   /* backwards key */
 
 static char *colors[SchemeLast][2] = {
@@ -28,7 +28,7 @@ static char *colors[SchemeLast][2] = {
 };
  
 
-/* -c option, if nonzero flybinds will set this number of colums. If not, it's calculated */
+/* -c option, if nonzero dshortcuts will set this number of colums. If not, it's calculated */
 static unsigned int columns        = 6;
 static unsigned int colpadding     = 100;
 static unsigned int outpaddinghor  = 25;
@@ -37,7 +37,7 @@ static unsigned int titlepadding   = 5;
 static unsigned int borderpx       = 2;
 
 /*
- * Xresources preferences to load at startup (the class to use is "flybinds")
+ * Xresources preferences to load at startup (the class to use is "dshortcuts")
  */
 ResourcePref resources[] = {
 	{ "font",           STRING,  &font           },
