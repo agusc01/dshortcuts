@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+case "$1" in
+i) firefox-esr --new-window ;;
+o) firefox-esr --new-window --private-window ;;
+p) firefox-esr --new-window --private-window "https://duckduckgo.com/?q=DuckDuckGo+AI+Chat&ia=chat&duckai=1" ;;
+esac

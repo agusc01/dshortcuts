@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+_nvim() {
+    st -e nvim "$@"
+}
+
+case "$1" in
+m) _nvim "$HOME/.config/dmenu/config.def.h" ;;
+w) _nvim "$HOME/.config/dwm/config.def.h" ;;
+b) _nvim "$HOME/.config/dbar/config.def.h" ;;
+s) _nvim "$HOME/.config/dshortcuts/config.def.h" ;;
+t) _nvim "$HOME/.config/st/config.def.h" ;;
+l) _nvim "$HOME/.config/slock/config.def.h" ;;
+esac

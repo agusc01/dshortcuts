@@ -16,7 +16,7 @@ static char titlefg[]       = "#ff0000"; /* key name foreground */
 static char sepfg[]         = "#00ffff"; /* separator foreground */
 static char descfg[]        = "#ffffff"; /* description foreground */
 static char bordercol[]     = "#005F73"; /* border color */
-static unsigned int backkey = XK_h;   /* backwards key */
+static unsigned int backkey = XK_BackSpace;   /* backwards key */
 
 static char *colors[SchemeLast][2] = {
 	/*                 fg          bg       */
@@ -57,7 +57,7 @@ ResourcePref resources[] = {
 };
  
 
-#define SC(path) "$HOME/.config/dshortcuts/scripts" #path
+#define SC(path) "$HOME/.config/dshortcuts/scripts/" #path
 
 #include "items.h"
 
@@ -66,7 +66,10 @@ ResourcePref resources[] = {
 /* parent items */
 static item items[] = {
     /* keyname  description    path to script keep open?  childs      childs length  vertical   */
-    { "d",    "Data realtime", NULL,             0,   data_realtime,     LENGTH(data_realtime)    ,0 },
+    { "d",    "Display process",    SC("process"),      0,   process,      LENGTH(process)           ,0 },
+    { "e",    "Edit",               SC("edit"),         0,   edit,         LENGTH(edit)              ,0 },
+    { "i",    "Internet",           SC("internet"),     0,   internet,     LENGTH(internet)          ,0 },
+    { "p",    "Power",              SC("power"),        0,   power,        LENGTH(power)             ,0 },
     // { "l",    "Llançador",     SC("launcher"),   0,   launch,            LENGTH(launch)           ,0 },
     // { "c",    "Configuració",  NULL,             0,   config,            LENGTH(config)           ,0 },
     // { "e",    "Emacs",         SC("emacs"),      0,   emacs,             LENGTH(emacs)            ,0 },

@@ -6,6 +6,7 @@ static Key keys[] = {
     { 0, XK_comma,  ","   },
     { 0, XK_plus,   "+"   },
     { 0, XK_minus,  "-"   },
+    { 0, XK_BackSpace, "⌫" },
 
     /* numbers */
     { 0, XK_0, "0" },

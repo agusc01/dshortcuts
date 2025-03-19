@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+case "$1" in
+h) st -e htop ;;
+b) st -e btop ;;
+t) st -e top ;;
+esac
