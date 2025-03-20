@@ -70,6 +70,8 @@ static item items[] = {
     { "e",    "Edit",               SC("edit"),         0,   edit,         LENGTH(edit)              ,0 },
     { "i",    "Internet",           SC("internet"),     0,   internet,     LENGTH(internet)          ,0 },
     { "p",    "Power",              SC("power"),        0,   power,        LENGTH(power)             ,0 },
+    { "s",    "Sound",              SC("sound"),        1,   sound,        LENGTH(sound)             ,1 },
+    { "b",    "Brightness",         SC("Brightness"),   1,   brightness,   LENGTH(brightness)        ,1 },
     // { "l",    "Llançador",     SC("launcher"),   0,   launch,            LENGTH(launch)           ,0 },
     // { "c",    "Configuració",  NULL,             0,   config,            LENGTH(config)           ,0 },
     // { "e",    "Emacs",         SC("emacs"),      0,   emacs,             LENGTH(emacs)            ,0 },

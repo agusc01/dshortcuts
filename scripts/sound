@@ -1,0 +1,6 @@
+#!/bin/sh
+
+case "$1" in
+j) fish -c 's0' ;;
+k) fish -c 's1' ;;
+esac

@@ -26,6 +26,15 @@ static item power[] = {
     { "q", "Exit"           },
 };
 
+static item sound[] = {
+    { "j", "Decrement 10% Sound" },
+    { "k", "Increment 10% Sound" },
+};
+
+static item brightness[] = {
+    { "j", "Decrement 10% Brightness" },
+    { "k", "Increment 10% Brightness" },
+};
 
 // static item sound[] = {
 //     { "p", "AI (private)"   },
