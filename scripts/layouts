@@ -1,0 +1,23 @@
+#!/bin/sh
+
+_signal() {
+    xsetroot -name "fsignal:$1"
+}
+
+case "$@" in
+"t") _signal 0 ;;
+"m") _signal 1 ;;
+"s") _signal 2 ;;
+"w") _signal 3 ;;
+"d") _signal 4 ;;
+"b") _signal 5 ;;
+"B") _signal 6 ;;
+"g") _signal 7 ;;
+"r") _signal 8 ;;
+"h") _signal 9 ;;
+"l") _signal 10 ;;
+"M") _signal 12 ;;
+"F") _signal 13 ;;
+"f") _signal 14 ;;
+
+esac

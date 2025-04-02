@@ -26,13 +26,6 @@ static item firefoxNP[] = {
     { "p", "private",       SC("firefox-private"),     0,       firefox,    LENGTH(firefox),   1 },
 };
 
-static item power[] = {
-    { "p", "Power off"                  },
-    { "r", "Reboot"                     },
-    { "b", "Block"                      },
-    { "q", "Exit"                       },
-};
-
 static item sound[] = {
     { "j", "Decrement 10% Sound"        },
     { "k", "Increment 10% Sound"        },
@@ -43,3 +36,26 @@ static item brightness[] = {
     { "k", "Increment 10% Brightness"   },
 };
 
+static item power[] = {
+    { "p", "Power off"                  },
+    { "r", "Reboot"                     },
+    { "b", "Block"                      },
+    { "q", "Exit"                       },
+};
+
+static item layouts[] = {
+	{ "t",      "tile"                  },
+	{ "m",      "monocle"               },
+	{ "s",      "spiral"                },
+	{ "w",      "dwindle"               },
+	{ "d",      "deck"                  },
+	{ "b",      "bstack"                },
+	{ "B",      "bstackhoriz"           },
+	{ "g",      "grid"                  },
+	{ "r",      "nrowgrid"              },
+	{ "h",      "horizgrid"             },
+	{ "l",      "gaplessgrid"           },
+	{ "M",      "centeredmaster"        },
+	{ "F",      "centeredfloatingmaster"},
+	{ "f",      "floating"              },
+};
