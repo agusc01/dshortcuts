@@ -1,0 +1,11 @@
+#!/bin/sh
+
+case "$1" in
+p) st -e sh -c "figlet 'Power off'; read -p 'CANCEL with CTRL+C OR a wrong passwod xD     '; sudo poweroff" ;;
+r) st -e sh -c "figlet 'Reboot'; read -p 'CANCEL with CTRL+C OR a wrong passwod xD     '; sudo reboot" ;;
+b)
+    slock &
+    xset dpms force off
+    ;;
+q) st -e sh -c "figlet 'Exit'; read -p 'CANCEL with CTRL+C OR a wrong passwod xD     '; sudo pkill dwm" ;;
+esac
