@@ -43,7 +43,7 @@ static item power[] = {
     { "q", "Exit"                       },
 };
 
-static item layouts[] = {
+static item layout[] = {
 	{ "t",      "tile"                  },
 	{ "m",      "monocle"               },
 	{ "s",      "spiral"                },
