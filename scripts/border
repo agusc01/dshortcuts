@@ -1,0 +1,11 @@
+#!/bin/sh
+
+_signal() {
+    xsetroot -name "fsignal:$1"
+}
+
+case "$@" in
+j) _signal 30 ;;
+k) _signal 31 ;;
+s) _signal 32 ;;
+esac

@@ -40,9 +40,8 @@ static item items[] = {
     /* keyname  description         path to script keep open?  childs      childs length       vertical   */
     { "s",    "Surf",               SC("surf"),         0,   surf,         LENGTH(surf)              ,1 },
     { "f",    "Firefox",            NULL,               0,   firefoxNP,    LENGTH(firefoxNP)         ,1 },
-    { "l",    "Layout",             SC("layout"),       1,   layout,       LENGTH(layout)            ,1 },
-    { "S",    "Sound",              SC("sound"),        1,   sound,        LENGTH(sound)             ,1 },
-    { "b",    "Brightness",         SC("brightness"),   1,   brightness,   LENGTH(brightness)        ,1 },
+    { "d",    "DWM",                NULL,               0,   dwm,          LENGTH(dwm)               ,1 },
+    { "m",    "machine",            NULL,               0,   machine,      LENGTH(machine)           ,1 },
     { "p",    "Power",              SC("power"),        0,   power,        LENGTH(power)             ,0 },
 };
 
