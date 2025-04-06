@@ -1,9 +1,5 @@
 #!/bin/sh
 
-_signal() {
-    xsetroot -name "fsignal:$1"
-}
-
 case "$@" in
 j) fish -c "fsignal 30" ;;
 k) fish -c "fsignal 31" ;;

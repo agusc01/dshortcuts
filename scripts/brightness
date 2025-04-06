@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# TODO: use fsignal
+
 case "$1" in
 j) fish -c 'b0' ;;
 k) fish -c 'b1' ;;

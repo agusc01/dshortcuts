@@ -1,6 +1,22 @@
 #!/bin/sh
 
-# case "$@" in
 # TODO
-
-# esac
+case "$@" in
+t) fish -c "fsignal 56" ;; # togglegaps,
+i) fish -c "fsignal 55" ;; # defaultgaps,
+s) fish -c "fsignal 74" ;; # togglesmartgaps,
+j) fish -c "fsignal 40" ;; # incrgaps,
+J) fish -c "fsignal 41" ;; # incrgaps,
+k) fish -c "fsignal 42" ;; # incrigaps,
+K) fish -c "fsignal 43" ;; # incrigaps,
+u) fish -c "fsignal 44" ;; # incrogaps,
+U) fish -c "fsignal 45" ;; # incrogaps,
+1) fish -c "fsignal 46" ;; # incrihgaps,
+2) fish -c "fsignal 47" ;; # incrihgaps,
+3) fish -c "fsignal 48" ;; # incrivgaps,
+4) fish -c "fsignal 49" ;; # incrivgaps,
+5) fish -c "fsignal 51" ;; # incrohgaps,
+6) fish -c "fsignal 52" ;; # incrohgaps,
+7) fish -c "fsignal 53" ;; # incrovgaps,
+8) fish -c "fsignal 54" ;; # incrovgaps,
+esac
