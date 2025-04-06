@@ -1,23 +1,19 @@
 #!/bin/sh
 
-_signal() {
-    xsetroot -name "fsignal:$1"
-}
-
 case "$@" in
-"t") _signal 0 ;;
-"m") _signal 1 ;;
-"s") _signal 2 ;;
-"w") _signal 3 ;;
-"d") _signal 4 ;;
-"b") _signal 5 ;;
-"B") _signal 6 ;;
-"g") _signal 7 ;;
-"r") _signal 8 ;;
-"h") _signal 9 ;;
-"l") _signal 10 ;;
-"M") _signal 12 ;;
-"F") _signal 13 ;;
-"f") _signal 14 ;;
+"t") fish -c "fsignal 0" ;;
+"m") fish -c "fsignal 1" ;;
+"s") fish -c "fsignal 2" ;;
+"w") fish -c "fsignal 3" ;;
+"d") fish -c "fsignal 4" ;;
+"b") fish -c "fsignal 5" ;;
+"B") fish -c "fsignal 6" ;;
+"g") fish -c "fsignal 7" ;;
+"r") fish -c "fsignal 8" ;;
+"h") fish -c "fsignal 9" ;;
+"l") fish -c "fsignal 10" ;;
+"M") fish -c "fsignal 12" ;;
+"F") fish -c "fsignal 13" ;;
+"f") fish -c "fsignal 14" ;;
 
 esac

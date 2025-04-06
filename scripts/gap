@@ -1,9 +1,5 @@
 #!/bin/sh
 
-_signal() {
-    xsetroot -name "fsignal:$1"
-}
-
 # case "$@" in
 # TODO
 

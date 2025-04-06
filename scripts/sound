@@ -1,5 +1,9 @@
 #!/bin/sh
 
+_signal() {
+    xsetroot -name "fsignal:$1"
+}
+
 case "$1" in
 j) fish -c 's0' ;;
 k) fish -c 's1' ;;
