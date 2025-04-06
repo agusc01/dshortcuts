@@ -1,29 +1,29 @@
 static item surf[] = {
-    { "n", "normal"                     },
+    { "n", "Normal"                     },
     { "a", "AI"                         },
-    { "s", "spotify"                    },
-    { "y", "youtube"                    },
-    { "e", "translate EN->ES"           },
-    { "E", "translate ES->EN"           },
+    { "s", "Spotify"                    },
+    { "y", "Youtube"                    },
+    { "e", "Translate EN->ES"           },
+    { "E", "Translate ES->EN"           },
 };
 
 static item firefox[] = {
     { "a", "AI (duck)"                  },
-    { "d", "duck"                       },
-    { "g", "google"                     },
-    { "G", "github"                     },
-    { "m", "gmail"                      },
-    { "d", "drive"                      },
-    { "w", "whastApp"                   },
-    { "s", "spotify"                    },
-    { "y", "youtube"                    },
-    { "e", "translate EN->ES"           },
-    { "E", "translate ES->EN"           },
+    { "d", "Duck"                       },
+    { "g", "Google"                     },
+    { "G", "Github"                     },
+    { "m", "Gmail"                      },
+    { "d", "Drive"                      },
+    { "w", "WhastApp"                   },
+    { "s", "Spotify"                    },
+    { "y", "Youtube"                    },
+    { "e", "Translate EN->ES"           },
+    { "E", "Translate ES->EN"           },
 };
 
 static item firefoxNP[] = {
-    { "n", "normal",        SC("firefox-normal"),      0,       firefox,    LENGTH(firefox),   1 },
-    { "p", "private",       SC("firefox-private"),     0,       firefox,    LENGTH(firefox),   1 },
+    { "n", "Normal",        SC("firefox-normal"),      0,       firefox,    LENGTH(firefox),   1 },
+    { "p", "Private",       SC("firefox-private"),     0,       firefox,    LENGTH(firefox),   1 },
 };
 
 static item sound[] = {
@@ -47,7 +47,6 @@ static item sound[] = {
 static item brightness[] = {
     { "j", "Decrement 10% Brightness"   },
     { "k", "Increment 10% Brightness"   },
-    { "0", "Set Brightness in 0%"       },
     { "1", "Set Brightness in 10%"      },
     { "2", "Set Brightness in 20%"      },
     { "3", "Set Brightness in 30%"      },
@@ -68,8 +67,8 @@ static item power[] = {
 };
 
 static item machine[] = {
-    { "s", "sound",              SC("sound"),        1,   sound,        LENGTH(sound)             ,1 },
-    { "b", "brightness",         SC("brightness"),   1,   brightness,   LENGTH(brightness)        ,1 },
+    { "s", "Sound",              SC("sound"),        1,   sound,        LENGTH(sound)             ,1 },
+    { "b", "Brightness",         SC("brightness"),   1,   brightness,   LENGTH(brightness)        ,1 },
 };
 
 static item gap[] = {
@@ -98,20 +97,20 @@ static item border[] = {
 };
 
 static item layout[] = {
-	{ "t", "tile"                  },
-	{ "m", "monocle"               },
-	{ "s", "spiral"                },
-	{ "w", "dwindle"               },
-	{ "d", "deck"                  },
-	{ "b", "bstack"                },
-	{ "B", "bstackhoriz"           },
-	{ "g", "grid"                  },
-	{ "r", "nrowgrid"              },
-	{ "h", "horizgrid"             },
-	{ "l", "gaplessgrid"           },
-	{ "M", "centeredmaster"        },
-	{ "F", "centeredfloatingmaster"},
-	{ "f", "floating"              },
+	{ "t", "Tile"                  },
+	{ "m", "Monocle"               },
+	{ "s", "Spiral"                },
+	{ "w", "Dwindle"               },
+	{ "d", "Deck"                  },
+	{ "b", "Bstack"                },
+	{ "B", "Bstackhoriz"           },
+	{ "g", "Grid"                  },
+	{ "r", "Nrowgrid"              },
+	{ "h", "Horizgrid"             },
+	{ "l", "Gaplessgrid"           },
+	{ "M", "Centeredmaster"        },
+	{ "F", "Centeredfloatingmaster"},
+	{ "f", "Floating"              },
 };
 
 static item dwm[] = {

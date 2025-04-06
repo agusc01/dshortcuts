@@ -3,7 +3,6 @@
 case "$1" in
 j) fish -c 'b0' ;;
 k) fish -c 'b1' ;;
-0) fish -c 'setbrightness 0' ;;
 1) fish -c 'setbrightness 10' ;;
 2) fish -c 'setbrightness 20' ;;
 3) fish -c 'setbrightness 30' ;;
