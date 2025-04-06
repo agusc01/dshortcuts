@@ -3,4 +3,15 @@
 case "$1" in
 j) fish -c 'b0' ;;
 k) fish -c 'b1' ;;
+0) fish -c 'setbrightness 0' ;;
+1) fish -c 'setbrightness 10' ;;
+2) fish -c 'setbrightness 20' ;;
+3) fish -c 'setbrightness 30' ;;
+4) fish -c 'setbrightness 40' ;;
+5) fish -c 'setbrightness 50' ;;
+6) fish -c 'setbrightness 60' ;;
+7) fish -c 'setbrightness 70' ;;
+8) fish -c 'setbrightness 80' ;;
+9) fish -c 'setbrightness 90' ;;
+o) fish -c 'setbrightness 100' ;;
 esac

@@ -29,11 +29,35 @@ static item firefoxNP[] = {
 static item sound[] = {
     { "j", "Decrement 10% Sound"        },
     { "k", "Increment 10% Sound"        },
+    { "0", "Set Sound in 0%"            },
+    { "1", "Set Sound in 10%"           },
+    { "2", "Set Sound in 20%"           },
+    { "3", "Set Sound in 30%"           },
+    { "4", "Set Sound in 40%"           },
+    { "5", "Set Sound in 50%"           },
+    { "6", "Set Sound in 60%"           },
+    { "7", "Set Sound in 70%"           },
+    { "8", "Set Sound in 80%"           },
+    { "9", "Set Sound in 90%"           },
+    { "o", "Set Sound in 100%"          },
+    { "m", "Mute sound"                 },
+    { "u", "Unmute sound"               },
 };
 
 static item brightness[] = {
     { "j", "Decrement 10% Brightness"   },
     { "k", "Increment 10% Brightness"   },
+    { "0", "Set Brightness in 0%"       },
+    { "1", "Set Brightness in 10%"      },
+    { "2", "Set Brightness in 20%"      },
+    { "3", "Set Brightness in 30%"      },
+    { "4", "Set Brightness in 40%"      },
+    { "5", "Set Brightness in 50%"      },
+    { "6", "Set Brightness in 60%"      },
+    { "7", "Set Brightness in 70%"      },
+    { "8", "Set Brightness in 80%"      },
+    { "9", "Set Brightness in 90%"      },
+    { "o", "Set Brightness in 100%"     },
 };
 
 static item power[] = {
