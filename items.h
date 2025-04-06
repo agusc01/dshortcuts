@@ -8,6 +8,7 @@ static item surf[] = {
 };
 
 static item firefox[] = {
+    { "n", "Nothing"                       },
     { "a", "AI (duck)"                     },
     { "d", "Duck"                          },
     { "g", "Google"                        },
@@ -118,4 +119,14 @@ static item dwm[] = {
     { "l", "Layout",             SC("layout"),       1,   layout,       LENGTH(layout)            ,1 },
     { "g", "Gap",                SC("gap"),          1,   gap,          LENGTH(gap)               ,1 },
     { "b", "Border",             SC("border"),       1,   border,       LENGTH(border)            ,1 },
+};
+
+static item toggle[] = {
+    { "b", "Togglebar",                    },
+    { "f", "Togglefloating"                },
+    { "F", "Togglefullscr"                 },
+    { "s", "Togglesticky"                  },
+    { "g", "Togglesmartgaps"               },
+    { "b", "Togglesmartborders"            },
+    { "t", "Togglealttag"                  },
 };

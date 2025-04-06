@@ -1,0 +1,11 @@
+#!/bin/sh
+
+case "$1" in
+b) fish -c "fsignal 70" ;; # togglebar,
+f) fish -c "fsignal 71" ;; # togglefloating,
+F) fish -c "fsignal 72" ;; # togglefullscr,
+s) fish -c "fsignal 73" ;; # togglesticky,
+g) fish -c "fsignal 74" ;; # togglesmartgaps,
+b) fish -c "fsignal 75" ;; # togglesmartborders,
+t) fish -c "fsignal 76" ;; # togglealttag,
+esac

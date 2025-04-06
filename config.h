@@ -41,7 +41,8 @@ static item items[] = {
     { "s",    "Surf",               SC("surf"),         0,   surf,         LENGTH(surf)              ,1 },
     { "f",    "Firefox",            NULL,               0,   firefoxNP,    LENGTH(firefoxNP)         ,1 },
     { "d",    "DWM",                NULL,               0,   dwm,          LENGTH(dwm)               ,1 },
-    { "m",    "machine",            NULL,               0,   machine,      LENGTH(machine)           ,1 },
+    { "m",    "Machine",            NULL,               0,   machine,      LENGTH(machine)           ,1 },
+    { "t",    "Toggle",             SC("toggle"),       0,   toggle,       LENGTH(toggle)            ,1 },
     { "p",    "Power",              SC("power"),        0,   power,        LENGTH(power)             ,0 },
 };
 
