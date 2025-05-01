@@ -1,10 +1,10 @@
 #!/bin/sh
 
 case "$1" in
-n) surf ;;
-a) surf ai ;;
-s) surf spotify ;;
-y) surf youtube ;;
-e) surf tre ;;
-E) surf trs ;;
+n) surf & ;;
+a) surf ai & ;;
+s) surf spotify & ;;
+y) surf youtube & ;;
+e) surf tre & ;;
+E) surf trs & ;;
 esac
