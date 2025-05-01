@@ -1,7 +1,0 @@
-#!/bin/sh
-
-case "$@" in
-j) fish -c "fsignal 30" ;;
-k) fish -c "fsignal 31" ;;
-s) fish -c "fsignal 32" ;;
-esac

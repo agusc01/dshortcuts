@@ -29,7 +29,7 @@ static unsigned int outpaddinghor  = 25;
 static unsigned int outpaddingvert = 15;
 static unsigned int borderpx       = 2;
 
-#define SC(path) "$HOME/.config/dshortcuts/scripts/" #path
+#define SC(path) "$HOME/.bash_scripts/dshortcuts/" #path
 
 #include "items.h"
 
