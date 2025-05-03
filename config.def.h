@@ -43,6 +43,7 @@ static item items[] = {
     { "d",    "DWM",                NULL,               0,   dwm,          LENGTH(dwm)               ,1 },
     { "m",    "Machine",            NULL,               0,   machine,      LENGTH(machine)           ,1 },
     { "t",    "Toggle",             SC("toggle"),       0,   toggle,       LENGTH(toggle)            ,1 },
+    { "r",    "Rotation",           SC("rotation"),     0,   rotation,     LENGTH(rotation)          ,0 },
     { "p",    "Power",              SC("power"),        0,   power,        LENGTH(power)             ,0 },
 };
 

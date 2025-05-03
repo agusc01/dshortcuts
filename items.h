@@ -130,3 +130,10 @@ static item toggle[] = {
     { "b", "Togglesmartborders"            },
     { "t", "Togglealttag"                  },
 };
+
+static item rotation[] = {
+    { "r", "Right"                         },
+    { "l", "Left"                          },
+    { "n", "Normal"                        },
+    { "i", "Inverted"                      },
+};
