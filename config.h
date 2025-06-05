@@ -29,7 +29,8 @@ static unsigned int outpaddinghor  = 25;
 static unsigned int outpaddingvert = 15;
 static unsigned int borderpx       = 2;
 
-#define SC(path) "~/.bash_scripts/dshortcuts/" #path
+#define SCRIPT_DSHORTCUTS(path) "~/.bash_scripts/dshortcuts/" #path
+#define SCRIPT_ROFI(path) "~/.bash_scripts/rofi/" #path
 
 #include "items.h"
 
@@ -38,15 +39,15 @@ static unsigned int borderpx       = 2;
 /* parent items */
 static item items[] = {
     /* keyname  description         path to script keep open?  childs      childs length       vertical   */
-    { "s",    "Surf",               SC("surf"),         0,   internet,      LENGTH(internet)          ,1 },
-    { "f",    "Firefox",            NULL,               0,   firefoxNP,     LENGTH(firefoxNP)         ,1 },
-    { "b",    "Brave",              NULL,               0,   braveNP,       LENGTH(braveNP)           ,1 },
-    { "l",    "LibreWolf",          NULL,               0,   libreWolfNP,   LENGTH(libreWolfNP)       ,1 },
-    { "q",    "QuteBrowser",        NULL,               0,   quteBrowserNP, LENGTH(quteBrowserNP)     ,1 },
-    { "d",    "DWM",                NULL,               0,   dwm,           LENGTH(dwm)               ,1 },
-    { "m",    "Machine",            NULL,               0,   machine,       LENGTH(machine)           ,1 },
-    { "t",    "Toggle",             SC("toggle"),       0,   toggle,        LENGTH(toggle)            ,1 },
-    { "r",    "Rotation",           SC("rotation"),     0,   rotation,      LENGTH(rotation)          ,0 },
-    { "p",    "Power",              SC("power"),        0,   power,         LENGTH(power)             ,0 },
+    { "s",    "Surf",               SCRIPT_DSHORTCUTS("surf"),         0,   internet,      LENGTH(internet)          ,1 },
+    { "f",    "Firefox",            NULL,                              0,   firefoxNP,     LENGTH(firefoxNP)         ,1 },
+    { "b",    "Brave",              NULL,                              0,   braveNP,       LENGTH(braveNP)           ,1 },
+    { "l",    "LibreWolf",          NULL,                              0,   libreWolfNP,   LENGTH(libreWolfNP)       ,1 },
+    { "q",    "QuteBrowser",        NULL,                              0,   quteBrowserNP, LENGTH(quteBrowserNP)     ,1 },
+    { "d",    "DWM",                NULL,                              0,   dwm,           LENGTH(dwm)               ,1 },
+    { "m",    "Machine",            NULL,                              0,   machine,       LENGTH(machine)           ,1 },
+    { "t",    "Toggle",             SCRIPT_DSHORTCUTS("toggle"),       0,   toggle,        LENGTH(toggle)            ,1 },
+    { "r",    "Rotation",           SCRIPT_DSHORTCUTS("rotation"),     0,   rotation,      LENGTH(rotation)          ,0 },
+    { "p",    "Power",              SCRIPT_DSHORTCUTS("power"),        0,   power,         LENGTH(power)             ,0 },
 };
 

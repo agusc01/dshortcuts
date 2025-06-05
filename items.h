@@ -14,23 +14,23 @@ static item internet[] = {
 };
 
 static item firefoxNP[] = {
-    { "n", "Normal",        SC("firefoxn"),      0,       internet,    LENGTH(internet),   1 },
-    { "p", "Private",       SC("firefoxp"),      0,       internet,    LENGTH(internet),   1 },
+    { "n", "Normal",        SCRIPT_DSHORTCUTS("firefoxn"),      0,       internet,    LENGTH(internet),   1 },
+    { "p", "Private",       SCRIPT_DSHORTCUTS("firefoxp"),      0,       internet,    LENGTH(internet),   1 },
 };
 
 static item libreWolfNP[] = {
-    { "n", "Normal",        SC("librewolfn"),    0,       internet,    LENGTH(internet),   1 },
-    { "p", "Private",       SC("librewolfp"),    0,       internet,    LENGTH(internet),   1 },
+    { "n", "Normal",        SCRIPT_DSHORTCUTS("librewolfn"),    0,       internet,    LENGTH(internet),   1 },
+    { "p", "Private",       SCRIPT_DSHORTCUTS("librewolfp"),    0,       internet,    LENGTH(internet),   1 },
 };
 
 static item braveNP[] = {
-    { "n", "Normal",        SC("braven"),        0,       internet,    LENGTH(internet),   1 },
-    { "p", "Private",       SC("bravep"),        0,       internet,    LENGTH(internet),   1 },
+    { "n", "Normal",        SCRIPT_DSHORTCUTS("braven"),        0,       internet,    LENGTH(internet),   1 },
+    { "p", "Private",       SCRIPT_DSHORTCUTS("bravep"),        0,       internet,    LENGTH(internet),   1 },
 };
 
 static item quteBrowserNP[] = {
-    { "n", "Normal",        SC("qutebrowsern"),  0,       internet,    LENGTH(internet),   1 },
-    { "p", "Private",       SC("qutebrowserp"),  0,       internet,    LENGTH(internet),   1 },
+    { "n", "Normal",        SCRIPT_DSHORTCUTS("qutebrowsern"),  0,       internet,    LENGTH(internet),   1 },
+    { "p", "Private",       SCRIPT_DSHORTCUTS("qutebrowserp"),  0,       internet,    LENGTH(internet),   1 },
 };
 
 static item sound[] = {
@@ -74,8 +74,12 @@ static item power[] = {
 };
 
 static item machine[] = {
-    { "s", "Sound",              SC("sound"),        1,   sound,        LENGTH(sound)             ,1 },
-    { "b", "Brightness",         SC("brightness"),   1,   brightness,   LENGTH(brightness)        ,1 },
+    { "s", "Sound",              SCRIPT_DSHORTCUTS("sound"),        1,   sound,        LENGTH(sound)             ,1 },
+    { "b", "Brightness",         SCRIPT_DSHORTCUTS("brightness"),   1,   brightness,   LENGTH(brightness)        ,1 },
+    { "B", "Bluetooth",          SCRIPT_DSHORTCUTS("bluetooth")},
+    { "w", "WiFi",               SCRIPT_DSHORTCUTS("wifi")},
+    { "c", "Camera",             SCRIPT_ROFI("camera")},
+    { "m", "Microphone",         SCRIPT_ROFI("microphone")},
 };
 
 static item gap[] = {
@@ -122,9 +126,9 @@ static item layout[] = {
 };
 
 static item dwm[] = {
-    { "l", "Layout",             SC("layout"),       1,   layout,       LENGTH(layout)            ,1 },
-    { "g", "Gap",                SC("gap"),          1,   gap,          LENGTH(gap)               ,1 },
-    { "b", "Border",             SC("border"),       1,   border,       LENGTH(border)            ,1 },
+    { "l", "Layout",             SCRIPT_DSHORTCUTS("layout"),       1,   layout,       LENGTH(layout)            ,1 },
+    { "g", "Gap",                SCRIPT_DSHORTCUTS("gap"),          1,   gap,          LENGTH(gap)               ,1 },
+    { "b", "Border",             SCRIPT_DSHORTCUTS("border"),       1,   border,       LENGTH(border)            ,1 },
 };
 
 static item toggle[] = {
