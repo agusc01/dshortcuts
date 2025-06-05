@@ -1,20 +1,11 @@
-static item surf[] = {
-    { "n", "Normal"                        },
-    { "a", "AI"                            },
-    { "s", "Spotify"                       },
-    { "y", "Youtube"                       },
-    { "e", "Translate EN->ES"              },
-    { "E", "Translate ES->EN"              },
-};
-
-static item firefox[] = {
+static item internet[] = {
     { "n", "Nothing"                       },
     { "a", "AI (duck)"                     },
     { "d", "Duck"                          },
     { "g", "Google"                        },
     { "G", "Github"                        },
     { "m", "Gmail"                         },
-    { "d", "Drive"                         },
+    { "D", "Drive"                         },
     { "w", "WhastApp"                      },
     { "s", "Spotify"                       },
     { "y", "Youtube"                       },
@@ -23,8 +14,23 @@ static item firefox[] = {
 };
 
 static item firefoxNP[] = {
-    { "n", "Normal",        SC("firefox-normal"),      0,       firefox,    LENGTH(firefox),   1 },
-    { "p", "Private",       SC("firefox-private"),     0,       firefox,    LENGTH(firefox),   1 },
+    { "n", "Normal",        SC("firefoxn"),      0,       internet,    LENGTH(internet),   1 },
+    { "p", "Private",       SC("firefoxp"),      0,       internet,    LENGTH(internet),   1 },
+};
+
+static item libreWolfNP[] = {
+    { "n", "Normal",        SC("librewolfn"),    0,       internet,    LENGTH(internet),   1 },
+    { "p", "Private",       SC("librewolfp"),    0,       internet,    LENGTH(internet),   1 },
+};
+
+static item braveNP[] = {
+    { "n", "Normal",        SC("braven"),        0,       internet,    LENGTH(internet),   1 },
+    { "p", "Private",       SC("bravep"),        0,       internet,    LENGTH(internet),   1 },
+};
+
+static item quteBrowserNP[] = {
+    { "n", "Normal",        SC("qutebrowsern"),  0,       internet,    LENGTH(internet),   1 },
+    { "p", "Private",       SC("qutebrowserp"),  0,       internet,    LENGTH(internet),   1 },
 };
 
 static item sound[] = {
