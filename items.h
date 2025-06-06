@@ -70,6 +70,7 @@ static item power[] = {
     { "p", "Power off"                     },
     { "r", "Reboot"                        },
     { "b", "Block"                         },
+    { "s", "Suspend"                       },
     { "q", "Exit"                          },
 };
 
