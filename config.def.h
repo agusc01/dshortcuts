@@ -43,7 +43,7 @@ static item items[] = {
     { "f",    "Firefox",            NULL,                              0,   firefoxNP,     LENGTH(firefoxNP)         ,1 },
     { "b",    "Brave",              NULL,                              0,   braveNP,       LENGTH(braveNP)           ,1 },
     { "l",    "LibreWolf",          NULL,                              0,   libreWolfNP,   LENGTH(libreWolfNP)       ,1 },
-    { "q",    "QuteBrowser",        NULL,                              0,   quteBrowserNP, LENGTH(quteBrowserNP)     ,1 },
+    { "q",    "QuteBrowser",        SCRIPT_DSHORTCUTS("qutebrowser"),  0,   internet,      LENGTH(internet)          ,1 },
     { "d",    "DWM",                NULL,                              0,   dwm,           LENGTH(dwm)               ,1 },
     { "m",    "Machine",            NULL,                              0,   machine,       LENGTH(machine)           ,1 },
     { "t",    "Toggle",             SCRIPT_DSHORTCUTS("toggle"),       0,   toggle,        LENGTH(toggle)            ,1 },
