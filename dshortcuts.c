@@ -229,9 +229,6 @@ drawmenu(void)
     drw_setscheme(drw, scheme[SchemeKey]);
     drw_rect(drw, 0, 0, mw, mh, 1, 1);
 
-    drw_setscheme(drw, scheme[SchemeBorder]);
-    drw_rect(drw, 0, topbar ? mh - borderpx : 0, mw, borderpx, 1, 1);
-
     item = parent;
 
     for (int i = 0; i < total; i++) {
@@ -242,8 +239,7 @@ drawmenu(void)
 	    x = outpaddinghor;
 	} else
 	    x += columnwidth;
-	
-	item++;
+    	item++;
     }
 
     drw_map(drw, win, 0, 0, mw, mh);
@@ -552,11 +548,14 @@ setup(void)
 	swa.override_redirect = True;
 	swa.background_pixel = scheme[SchemeKey][ColBg].pixel;
 	swa.event_mask = ExposureMask | KeyPressMask | VisibilityChangeMask;
-	win = XCreateWindow(dpy, parentwin, x, y, mw, mh, 0,
+	win = XCreateWindow(dpy, parentwin, x, y, mw, mh, borderpx,
 	                    CopyFromParent, CopyFromParent, CopyFromParent,
 	                    CWOverrideRedirect | CWBackPixel | CWEventMask, &swa);
-	XSetClassHint(dpy, win, &ch);
 
+	if (borderpx)
+		XSetWindowBorder(dpy, win, scheme[SchemeBorder][ColBg].pixel);
+
+	XSetClassHint(dpy, win, &ch);
 
 	/* input methods */
 	if ((xim = XOpenIM(dpy, NULL, NULL, NULL)) == NULL)

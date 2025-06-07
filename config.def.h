@@ -25,9 +25,9 @@ static char *colors[SchemeLast][2] = {
 /* -c option, if nonzero dshortcuts will set this number of colums. If not, it's calculated */
 static unsigned int columns        = 6;
 static unsigned int colpadding     = 100;
-static unsigned int outpaddinghor  = 25;
-static unsigned int outpaddingvert = 15;
-static unsigned int borderpx       = 2;
+static unsigned int outpaddinghor  = 50;
+static unsigned int outpaddingvert = 50;
+static unsigned int borderpx       = 6;
 static int centered = 1;                        /* -C option; centers dmenu on screen */
 static int min_width = 700;                     /* minimum width when centered */
 static const float menu_height_ratio = 2.0f;    /* This is the ratio used in the original calculation */
