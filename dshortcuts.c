@@ -122,6 +122,15 @@ calcoffsets() {
     mh = rows * bh + 2 * outpaddingvert;
 }
 
+static int
+max_textw(void)
+{
+	int len = 0;
+	for (struct item *item = items; item && item->text; item++)
+		len = MAX(TEXTW(item->text), len);
+	return len;
+}
+
 static void
 push(item *it) {
     /* push to the end */
@@ -508,10 +517,18 @@ setup(void)
 				if (INTERSECT(x, y, 1, 1, info[i]))
 					break;
 
-		mw = info[i].width;
+		if (centered)
+			mw = MIN(MAX(max_textw(), min_width), info[i].width);
+		else
+			mw = info[i].width;
 		calcoffsets();
-		x = info[i].x_org;
-		y = info[i].y_org + (topbar ? 0 : info[i].height - mh);
+		if (centered) {
+			x = info[i].x_org + ((info[i].width  - mw) / 2);
+			y = info[i].y_org + ((info[i].height - mh) / menu_height_ratio);
+		} else {
+			x = info[i].x_org;
+			y = info[i].y_org + (topbar ? 0 : info[i].height - mh);
+		}
 		XFree(info);
 	} else
 #endif
@@ -519,9 +536,15 @@ setup(void)
 		if (!XGetWindowAttributes(dpy, parentwin, &wa))
 			die("could not get embedding window attributes: 0x%lx",
 			    parentwin);
-		x = 0;
-		y = topbar ? 0 : wa.height - mh;
-		mw = wa.width;
+		if (centered) {
+			mw = MIN(MAX(max_textw(), min_width), wa.width);
+			x = (wa.width  - mw) / 2;
+			y = (wa.height - mh) / 2;
+		} else {
+			x = 0;
+			y = topbar ? 0 : wa.height - mh;
+			mw = wa.width;
+		}
 	}
 	inputw = MIN(inputw, mw/3);
 
@@ -584,6 +607,8 @@ main(int argc, char *argv[])
 			topbar = 0;
 		else if (!strcmp(argv[i], "-h")) /* displays help */
 			usage();
+		else if (!strcmp(argv[i], "-ce"))   /* centers dmenu on screen */
+			centered = 1;
 		/* these options take one argument */
 		else if (!strcmp(argv[i], "-c"))   /* number of columns in vertical list */
 			columns = atoi(argv[++i]);
