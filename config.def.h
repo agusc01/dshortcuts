@@ -23,14 +23,14 @@ static char *colors[SchemeLast][2] = {
 };
 
 /* -c option, if nonzero dshortcuts will set this number of colums. If not, it's calculated */
-static unsigned int columns        = 6;
-static unsigned int colpadding     = 100;
+static unsigned int columns        = 2;
+static unsigned int colpadding     = 50;
 static unsigned int outpaddinghor  = 50;
 static unsigned int outpaddingvert = 50;
 static unsigned int borderpx       = 6;
 static int centered = 1;                        /* -C option; centers dmenu on screen */
 static int min_width = 700;                     /* minimum width when centered */
-static const float menu_height_ratio = 2.0f;    /* This is the ratio used in the original calculation */
+static const float menu_height_ratio = 2.5f;    /* This is the ratio used in the original calculation */
 
 #define SCRIPT_DSHORTCUTS(path) "~/.bash_scripts/dshortcuts/" #path
 #define SCRIPT_ROFI(path) "~/.bash_scripts/rofi/" #path
@@ -50,7 +50,7 @@ static item items[] = {
     { "d",    "DWM",                NULL,                              0,   dwm,           LENGTH(dwm)               ,1 },
     { "m",    "Machine",            NULL,                              0,   machine,       LENGTH(machine)           ,1 },
     { "t",    "Toggle",             SCRIPT_DSHORTCUTS("toggle"),       0,   toggle,        LENGTH(toggle)            ,1 },
-    { "r",    "Rotation",           SCRIPT_DSHORTCUTS("rotation"),     0,   rotation,      LENGTH(rotation)          ,0 },
-    { "p",    "Power",              SCRIPT_DSHORTCUTS("power"),        0,   power,         LENGTH(power)             ,0 },
+    { "r",    "Rotation",           SCRIPT_DSHORTCUTS("rotation"),     0,   rotation,      LENGTH(rotation)          ,1 },
+    { "p",    "Power",              SCRIPT_DSHORTCUTS("power"),        0,   power,         LENGTH(power)             ,1 },
 };
 
