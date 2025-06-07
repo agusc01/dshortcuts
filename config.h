@@ -1,5 +1,5 @@
 /* See LICENSE file for copyright and license details. */
-#define FONT "Ubuntu:size=12"
+#define FONT "Ubuntu:size=22"
 
 static const char font[]    = { FONT };
 static const char *fonts[]  = { font };
