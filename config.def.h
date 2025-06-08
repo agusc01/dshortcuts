@@ -30,7 +30,7 @@ static unsigned int outpaddingvert = 50;
 static unsigned int borderpx       = 6;
 static int centered = 1;                        /* -C option; centers dmenu on screen */
 static int min_width = 700;                     /* minimum width when centered */
-static const float menu_height_ratio = 2.5f;    /* This is the ratio used in the original calculation */
+static const float menu_height_ratio = 4.0f;    /* This is the ratio used in the original calculation */
 
 #define SCRIPT_DSHORTCUTS(path) "~/.bash_scripts/dshortcuts/" #path
 #define SCRIPT_ROFI(path) "~/.bash_scripts/rofi/" #path
@@ -47,6 +47,7 @@ static item items[] = {
     { "b",    "Brave",              NULL,                              0,   braveNP,       LENGTH(braveNP)           ,1 },
     { "l",    "LibreWolf",          NULL,                              0,   libreWolfNP,   LENGTH(libreWolfNP)       ,1 },
     { "q",    "QuteBrowser",        SCRIPT_DSHORTCUTS("qutebrowser"),  0,   internet,      LENGTH(internet)          ,1 },
+    { "v",    "Vieb",               SCRIPT_DSHORTCUTS("vieb"),         0,   internet,      LENGTH(internet)          ,1 },
     { "d",    "DWM",                NULL,                              0,   dwm,           LENGTH(dwm)               ,1 },
     { "m",    "Machine",            NULL,                              0,   machine,       LENGTH(machine)           ,1 },
     { "t",    "Toggle",             SCRIPT_DSHORTCUTS("toggle"),       0,   toggle,        LENGTH(toggle)            ,1 },
