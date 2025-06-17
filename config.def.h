@@ -36,6 +36,7 @@ static const float menu_height_ratio = 3.0f;    /* This is the ratio used in the
 #define SCRIPT_DSHORTCUTS(path) "~/.bash_scripts/dshortcuts/" #path
 #define SCRIPT_ROFI(path) "~/.bash_scripts/rofi/" #path
 
+#include "colors.h"
 #include "items.h"
 
 /* see keys.h to see the keynames */
