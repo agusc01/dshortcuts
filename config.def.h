@@ -31,7 +31,7 @@ static unsigned int outpaddingvert = 20;
 static unsigned int borderpx       = 0;
 static int centered = 1;                        /* -C option; centers dmenu on screen */
 static int min_width = 700;                     /* minimum width when centered */
-static const float menu_height_ratio = 5.0f;    /* This is the ratio used in the original calculation */
+static const float menu_height_ratio = 3.0f;    /* This is the ratio used in the original calculation */
 
 #define SCRIPT_DSHORTCUTS(path) "~/.bash_scripts/dshortcuts/" #path
 #define SCRIPT_ROFI(path) "~/.bash_scripts/rofi/" #path
