@@ -8,6 +8,8 @@ OBJ = $(SRC:.c=.o)
 
 all: options dshortcuts stest
 
+LDFLAGS  = -L/usr/X11R6/lib -lX11 -lXinerama -lfontconfig -lXft -lXext
+
 options:
 	@echo dshortcuts build options:
 	@echo "CFLAGS   = $(CFLAGS)"

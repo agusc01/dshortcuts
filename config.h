@@ -1,17 +1,18 @@
 /* See LICENSE file for copyright and license details. */
-#define FONT "Ubuntu:size=22"
+#define FONT "Ubuntu:size=20"
 
-static const char font[]    = { FONT };
-static const char *fonts[]  = { font };
-static int topbar           = 1;         /* -b  option; if 0, dmenu appears at bottom     */
-static char sep[]           = ":";       /* -s option; set the separator between key and text */
-static char *maxkey         = "p";
-static char background[]    = "#000000"; /* global background */
-static char keyfg[]         = "#00ff00"; /* key name foreground */
-static char sepfg[]         = "#ffffff"; /* separator foreground */
-static char descfg[]        = "#ffffff"; /* description foreground */
-static char bordercol[]     = "#ffffff"; /* border color */
-static unsigned int backkey = XK_BackSpace;   /* backwards key */
+static const char font[]            = { FONT };
+static const char *fonts[]          = { font };
+static int topbar                   = 1;         /* -b  option; if 0, dmenu appears at bottom     */
+static char sep[]                   = ":";       /* -s option; set the separator between key and text */
+static char *maxkey                 = "p";
+static char background[]            = "#031D44"; /* global background */
+static char keyfg[]                 = "#90CAF9"; /* key name foreground */
+static char sepfg[]                 = "#FFFFFF"; /* separator foreground */
+static char descfg[]                = "#42A5F5"; /* description foreground */
+static char bordercol[]             = "#42A5F5"; /* border color */
+static unsigned int backkey         = XK_BackSpace;   /* backwards key */
+static const unsigned int cornerrad = 25;
 
 static char *colors[SchemeLast][2] = {
 	/*                 fg          bg       */
@@ -25,12 +26,12 @@ static char *colors[SchemeLast][2] = {
 /* -c option, if nonzero dshortcuts will set this number of colums. If not, it's calculated */
 static unsigned int columns        = 2;
 static unsigned int colpadding     = 50;
-static unsigned int outpaddinghor  = 50;
-static unsigned int outpaddingvert = 50;
-static unsigned int borderpx       = 6;
+static unsigned int outpaddinghor  = 20;
+static unsigned int outpaddingvert = 20;
+static unsigned int borderpx       = 0;
 static int centered = 1;                        /* -C option; centers dmenu on screen */
 static int min_width = 700;                     /* minimum width when centered */
-static const float menu_height_ratio = 4.0f;    /* This is the ratio used in the original calculation */
+static const float menu_height_ratio = 5.0f;    /* This is the ratio used in the original calculation */
 
 #define SCRIPT_DSHORTCUTS(path) "~/.bash_scripts/dshortcuts/" #path
 #define SCRIPT_ROFI(path) "~/.bash_scripts/rofi/" #path

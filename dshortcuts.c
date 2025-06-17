@@ -14,6 +14,7 @@
 #ifdef XINERAMA
 #include <X11/extensions/Xinerama.h>
 #endif
+#include <X11/extensions/shape.h>
 #include <X11/Xft/Xft.h>
 #include <X11/keysym.h>
 
@@ -60,8 +61,15 @@ struct stack {
     stack *prev;
 };
 
+static void roundcorners(void);
+
 static char *embed;
 static int bh, mw, mh;
+#if !PERTAG_PATCH
+static int enablegaps = 1;
+#endif // PERTAG_PATCH
+static int enablefullscreen = 0;
+static int enableoutergaps = 1;
 static int inputw = 0, columnwidth, showncols, rows;
 static int lrpad; /* sum of left and right padding */
 static int total;
@@ -243,6 +251,53 @@ drawmenu(void)
     }
 
     drw_map(drw, win, 0, 0, mw, mh);
+    roundcorners();
+}
+
+
+void
+roundcorners(void)
+{
+    XWindowAttributes wa;
+    XGetWindowAttributes(dpy, win, &wa);
+
+    // If this returns null, the window is invalid.
+    if(!XGetWindowAttributes(dpy, win, &wa))
+        return;
+
+    int width = borderpx * 2 + mw;
+    int height = borderpx * 2 + mh;
+    int rad = cornerrad * enablegaps * (1-enablefullscreen) * enableoutergaps;
+    int dia = 2 * rad;
+
+    // do not try to round if the window would be smaller than the corners
+    if(width < dia || height < dia)
+        return;
+
+    Pixmap mask = XCreatePixmap(dpy, win, width, height, 1);
+    // if this returns null, the mask is not drawable
+    if(!mask)
+        return;
+
+    XGCValues xgcv;
+    GC shape_gc = XCreateGC(dpy, mask, 0, &xgcv);
+    if(!shape_gc) {
+        XFreePixmap(dpy, mask);
+        return;
+    }
+
+    XSetForeground(dpy, shape_gc, 0);
+    XFillRectangle(dpy, mask, shape_gc, 0, 0, width, height);
+    XSetForeground(dpy, shape_gc, 1);
+    XFillArc(dpy, mask, shape_gc, 0, 0, dia, dia, 0, 23040);
+    XFillArc(dpy, mask, shape_gc, width-dia-1, 0, dia, dia, 0, 23040);
+    XFillArc(dpy, mask, shape_gc, 0, height-dia-1, dia, dia, 0, 23040);
+    XFillArc(dpy, mask, shape_gc, width-dia-1, height-dia-1, dia, dia, 0, 23040);
+    XFillRectangle(dpy, mask, shape_gc, rad, 0, width-dia, height);
+    XFillRectangle(dpy, mask, shape_gc, 0, rad, width, height-dia);
+    XShapeCombineMask(dpy, win, ShapeBounding, 0-wa.border_width, 0-wa.border_width, mask, ShapeSet);
+    XFreePixmap(dpy, mask);
+    XFreeGC(dpy, shape_gc);
 }
 
 static void
