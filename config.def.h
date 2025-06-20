@@ -53,10 +53,11 @@
 /* parent items */
 static item items[] = {
     /* keyname  description         path to script keep open?  childs      childs length       vertical   */
-    { "s",    "Surf",               SCRIPT_DSHORTCUTS("surf"),         0,   internet,      LENGTH(internet)          ,1 },
+    // { "s",    "Surf",               SCRIPT_DSHORTCUTS("surf"),         0,   internet,      LENGTH(internet)          ,1 },
     { "f",    "Firefox",            NULL,                              0,   firefoxNP,     LENGTH(firefoxNP)         ,1 },
-    { "b",    "Brave",              NULL,                              0,   braveNP,       LENGTH(braveNP)           ,1 },
     { "l",    "LibreWolf",          NULL,                              0,   libreWolfNP,   LENGTH(libreWolfNP)       ,1 },
+    { "b",    "Brave",              NULL,                              0,   braveNP,       LENGTH(braveNP)           ,1 },
+    { "c",    "Chrome",             NULL,                              0,   chromeNP,      LENGTH(chromeNP)          ,1 },
     { "q",    "QuteBrowser",        SCRIPT_DSHORTCUTS("qutebrowser"),  0,   internet,      LENGTH(internet)          ,1 },
     { "v",    "Vieb",               SCRIPT_DSHORTCUTS("vieb"),         0,   internet,      LENGTH(internet)          ,1 },
     { "d",    "DWM",                NULL,                              0,   dwm,           LENGTH(dwm)               ,1 },

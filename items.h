@@ -28,6 +28,11 @@ static item braveNP[] = {
     { "p", "Private",       SCRIPT_DSHORTCUTS("bravep"),        0,       internet,    LENGTH(internet),   1 },
 };
 
+static item chromeNP[] = {
+    { "n", "Normal",        SCRIPT_DSHORTCUTS("chromen"),       0,       internet,    LENGTH(internet),   1 },
+    { "p", "Private",       SCRIPT_DSHORTCUTS("chromep"),       0,       internet,    LENGTH(internet),   1 },
+};
+
 static item sound[] = {
     { "j", "Decrement 10% Sound"           },
     { "k", "Increment 10% Sound"           },
